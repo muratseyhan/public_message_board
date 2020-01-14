@@ -25,7 +25,7 @@ You can build and run the application using the provided gradle wrapper as follo
 [OpenJDK 13](https://jdk.java.net/13/) needs to be installed.
 If you do not have a unix shell available, the following commands would be different.
 
-### Build
+### Build with Gradle wrapper
 
 In order to build this project, open a terminal, navigate into the directory where you have cloned this repository,
 and then run the following command.
@@ -56,6 +56,14 @@ Run only the integration tests with the following command.
 
 Some styled html report should be available at "build/reports/tests/test/index.html" after the tests are run.
 
+### Run the artifact
+
+After the application is build, run the created JAR with the following command.
+
+```shell script
+java -jar build/libs/message_board-0.0.1-SNAPSHOT.jar --debug
+```
+
 ## Build and run with Docker
     
 You can build and run the application through docker as follows.
@@ -66,7 +74,7 @@ To be able to build and run the project using the instructions below,
 - [your user needs to be in the "docker" group](https://docs.docker.com/install/linux/linux-postinstall/)
 - you will also need a unix shell where docker is available
 
-### Build
+### Build with Docker
 
 In order to build this project with docker, open a terminal, navigate into the directory where you have cloned this repository,
 and then run the following command.
@@ -75,7 +83,7 @@ and then run the following command.
 docker build -t muratseyhan/message_board .
 ```
 
-### Run
+### Run with Docker
 
 Use the following to start the application on port 8080 and attach the terminal to the log stream.
 ```shell script
